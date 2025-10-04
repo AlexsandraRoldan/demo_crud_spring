@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: demo_crud_spring
+    env: java
+    plan: free
+    buildCommand: "./mvnw clean package -DskipTests"
+    startCommand: "java -jar target/*.jar"
+    envVars:
+      - key: DB_URL
+        value: jdbc:mysql://<tu-host>:3306/senati
+      - key: DB_USER
+        value: root
+      - key: DB_PASS
+        value:
