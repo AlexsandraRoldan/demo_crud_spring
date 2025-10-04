@@ -1,7 +1,10 @@
 package com.tecsup.model.entities;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 
 @Entity
 @Table(name="curso")
@@ -18,7 +21,6 @@ public class Curso {
     private String nombre;
 
     @Column
-    @NotNull
     private int creditos;
 
     public Curso() {
